@@ -7,21 +7,23 @@ public class testControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-    //    GvrViewer.Instance.VRModeEnabled = false;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        VRSettings.enabled = false;
         if (Input.GetButtonDown("Fire1"))
         {
             transform.Rotate(transform.rotation.eulerAngles + new Vector3(0f,0.1f,0f));
         }
 
-        float h = Input.GetAxis("Mouse X");
-        float v = Input.GetAxis("Mouse Y");
+        float hj = Input.GetAxis("Horizontal");
+        float vj = Input.GetAxis("Vertical");
+        transform.position += new Vector3(hj*0.1f, vj*0.1f, 0f);
 
-        transform.position += new Vector3(h*0.1f, v*0.1f, 0f);
-	}
+        float hm = Input.GetAxis("Mouse X");
+        float vm = Input.GetAxis("Mouse Y");
+        transform.position += new Vector3(hm * 0.1f, vm * 0.1f, 0f);
+    }
 }

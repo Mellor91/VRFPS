@@ -140,6 +140,9 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\dynamicVR.cs" />
+     <Compile Include="Assets\menuSceneLoader.cs" />
+     <Compile Include="Assets\middlewareConnector.cs" />
+     <Compile Include="Assets\playScript.cs" />
      <Compile Include="Assets\testControl.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
