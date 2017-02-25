@@ -9,14 +9,14 @@ public class dynamicVR : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameObject sm = GameObject.Find("SceneManager");
-        if(sm == null)
+        GameObject sceneManager = GameObject.Find("SceneManager");
+        if(sceneManager == null)
         {
             Debug.LogError("Unable to find Scene Manager");
         }
-        menuSceneLoader msl = sm.GetComponent<menuSceneLoader>();
+        //menuSceneLoader msl = sm.GetComponent<menuSceneLoader>();
          
-        GvrViewer.Instance.VRModeEnabled = msl.VRMode;
+        GvrViewer.Instance.VRModeEnabled = sceneManager.GetComponent<menuSceneLoader>().VRMode;
     }
 
     // Update is called once per frame
