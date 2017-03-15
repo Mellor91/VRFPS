@@ -46,7 +46,7 @@ public class movement : MonoBehaviour {
         }
         Vector3 rotatedMovement = camTransform.TransformDirection(move);
         rotatedMovement = new Vector3(rotatedMovement.x, 0, rotatedMovement.z);
-        Debug.Log("Virtual Joystick = " + move);
+        //Debug.Log("Virtual Joystick = " + move);
 
         rotatedMovement = rotatedMovement.normalized * move.magnitude;
 
